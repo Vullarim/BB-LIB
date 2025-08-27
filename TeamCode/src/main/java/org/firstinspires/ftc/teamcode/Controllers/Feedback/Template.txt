@@ -1,0 +1,31 @@
+This is a template for a feedback controller. Text inside {} represent things you add to customize
+your controller. Comments should retain their general structure.
+
+---------------------------------------------------------------------------------------------------
+
+/** Feedback controller with {list of your controller's terms} terms. {any other important details} */
+public class {your controller's name} {
+    // Gains
+    {any gains your controller has}
+
+    // Vars for calc
+    {any variables your calc needs}
+
+    /** Constructs a {@link {your controller's name}}.
+     * @param {gain initializers} {description of what term the gain applies to}
+     * */
+    public {your controller's name}({gain initializers}) {
+        {set gain vars to gain initializers}
+    }
+
+    /** Runs the {@link {your controller's name}} calculation on the arguments and returns the result.
+     * @param {input variables} {description of input variable}
+     * @return Motor power.
+     * */
+    public double Calc{input variables}) {
+        {your controller's calculation steps}
+        return {motor power};
+    }
+
+    {any other needed functions specific to your controller such as a reset function}
+}
